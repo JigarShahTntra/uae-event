@@ -18,7 +18,7 @@ default: &default
   # For details on connection pooling, see Rails configuration guide
   # https://guides.rubyonrails.org/configuring.html#database-pooling
   pool: <%= ENV.fetch("RAILS_MAX_THREADS") { 5 } %>
-  host: dpg-csr3of1opnds73b543jg-a
+  host: dpg-csr3of1opnds73b543jg-a.oregon-postgres.render.com
   username: uae_event_tntra_development_user
   password: 5Ytp1Lz9ITF3IddMtEAzuC5iMRf96Jl3
 
