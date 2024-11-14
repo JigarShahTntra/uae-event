@@ -65,15 +65,13 @@ Rails.application.configure do
   config.action_view.annotate_rendered_view_with_filenames = true
   config.action_mailer.delivery_method = :smtp
   config.action_mailer.smtp_settings = {
-    address:         "smtp.gmail.com",
-    port:            587,
-    domain:          "example.com",
-    user_name:       Rails.application.credentials.dig(:smtp, :user_name),
-    password:        Rails.application.credentials.dig(:smtp, :password),
-    authentication:  "plain",
-    enable_starttls: true,
-    open_timeout:    5,
-    read_timeout:    5
+    address: "smtp.mailgun.org",
+    port: 587,
+    domain: "sandboxe9492a4e664a4ccb9d5253ec5828cd17.mailgun.org",   # Your Mailgun domain
+    user_name: ENV["MAILGUN_USERNAME"],  # Your Mailgun SMTP username
+    password: ENV["MAILGUN_PASSWORD"],  # Your Mailgun SMTP password
+    authentication: "plain",
+    enable_starttls_auto: true
   }
 
 

@@ -87,6 +87,16 @@ Rails.application.configure do
 
   # Only use :id for inspections in production.
   config.active_record.attributes_for_inspect = [ :id ]
+  config.action_mailer.delivery_method = :smtp
+  config.action_mailer.smtp_settings = {
+    address: "smtp.mailgun.org",
+    port: 587,
+    domain: "sandboxe9492a4e664a4ccb9d5253ec5828cd17.mailgun.org",   # Your Mailgun domain
+    user_name: ENV["MAILGUN_USERNAME"],  # Your Mailgun SMTP username
+    password: ENV["MAILGUN_PASSWORD"],  # Your Mailgun SMTP password
+    authentication: "plain",
+    enable_starttls_auto: true
+  }
 
   # Enable DNS rebinding protection and other `Host` header attacks.
   # config.hosts = [
