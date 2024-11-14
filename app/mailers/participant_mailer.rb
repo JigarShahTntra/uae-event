@@ -1,8 +1,8 @@
 class ParticipantMailer < ApplicationMailer
-  default from: "aipoweredfutureoffintech@tntra.io"
+  default from: "Future of Fintech<aipoweredfutureoffintech@tntra.io>"
 
   def welcome_email
     @participant = params[:participant]
-    mail(to: @participant.email, subject: "Welcome to My Awesome Site")
+    mail(to: @participant.email, subject: "Registration Confirmed: UAE — AI-Powered Future of Fintech Workshop")
   end
 end
